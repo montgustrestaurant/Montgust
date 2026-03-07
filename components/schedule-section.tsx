@@ -115,8 +115,8 @@ export function ScheduleSection() {
                   initial={{ opacity: 0, x: 10 }}
                   animate={{ opacity: 1, x: 0 }}
                   className={`flex items-center gap-2 rounded-full px-3 py-1 text-[10px] md:text-xs font-bold border ${currentlyOpen
-                      ? "bg-green-500/10 text-green-600 border-green-500/20"
-                      : "bg-red-500/10 text-red-600 border-red-500/20"
+                    ? "bg-green-500/10 text-green-600 border-green-500/20"
+                    : "bg-red-500/10 text-red-600 border-red-500/20"
                     }`}
                 >
                   <span className={`h-1.5 w-1.5 rounded-full ${currentlyOpen ? "bg-green-500 animate-pulse" : "bg-red-500"}`} />
@@ -167,8 +167,8 @@ export function ScheduleSection() {
                   <div className="flex flex-col items-end gap-1">
                     <div
                       className={`text-base font-medium transition-colors ${isClosed
-                          ? "italic text-primary/40 line-through"
-                          : isToday ? "text-primary font-bold" : "text-muted-foreground group-hover:text-foreground"
+                        ? "italic text-primary/40 line-through"
+                        : isToday ? "text-primary font-bold" : "text-muted-foreground group-hover:text-foreground"
                         }`}
                     >
                       {item.hours.includes(t("schedule.status.open")) ? (
@@ -191,15 +191,6 @@ export function ScheduleSection() {
           </div>
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 1 }}
-          className="mt-12 text-center text-sm text-muted-foreground/60 italic"
-        >
-          * {t("nav.home") === "Inicio" ? "Horarios sujetos a cambios en días festivos." : "Opening hours subject to change on public holidays."}
-        </motion.p>
       </div>
     </section>
   )
