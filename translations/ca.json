@@ -1,0 +1,244 @@
+{
+    "nav": {
+        "home": "Inici",
+        "menu": "Carta",
+        "schedule": "Horari",
+        "essence": "La nostra essència",
+        "news": "Novetats",
+        "contact": "Contacte"
+    },
+    "hero": {
+        "slide1": {
+            "title": "Benvinguts a Mont-Gust",
+            "subtitle": ""
+        },
+        "slide2": {
+            "title": "Una experiència única",
+            "subtitle": "Gaudeix de cada moment amb nosaltres"
+        },
+        "slide3": {
+            "title": "Sabors del mar",
+            "subtitle": "Frescor i qualitat en cada plat"
+        },
+        "cta": "Veure carta"
+    },
+    "essence": {
+        "badge": "La nostra essència",
+        "title": "El que ens fa diferents",
+        "features": {
+            "takeaway": {
+                "name": "Paelles per emportar",
+                "desc": "Gaudeix de les nostres paelles casolanes a casa teva, llestes per a qualsevol ocasió.",
+                "cta": "Reservar"
+            },
+            "homemade": {
+                "name": "Menjar casolà",
+                "desc": "Plats tradicionals amb el sabor de sempre, preparats amb carinyo.",
+                "cta": "Veure carta"
+            },
+            "events": {
+                "name": "Celebració d'aniversaris",
+                "desc": "Fem que el teu dia especial sigui inoblidable amb menús adaptats.",
+                "cta": "Informació"
+            },
+            "business": {
+                "name": "Dinars i sopars d'empresa",
+                "desc": "Espais còmodes i menús pensats per a reunions de feina.",
+                "cta": "Veure espais"
+            },
+            "ac": {
+                "name": "Aire condicionat",
+                "desc": "Vine i gaudeix del teu tapat en un ambient fresc i agradable.",
+                "cta": "Vine a visitar-nos"
+            },
+            "inclusive": {
+                "name": "Adaptats a tothom",
+                "desc": "Si ets al·lèrgic, intolerant o vegà, tenim opcions per a tu.",
+                "cta": "Veure opcions"
+            }
+        }
+    },
+    "menu": {
+        "badge": "La nostra carta",
+        "title": "Sabors que enamoren",
+        "categories": {
+            "tapas": "Tapes i entrants",
+            "ensaladas": "Amanides",
+            "paellas": "Les nostres paelles",
+            "carnes": "Carns a la brasa",
+            "postres": "Postres casolans",
+            "kids": "Infantil",
+            "celebration": "Celebració"
+        },
+        "items": {
+            "pan_cristal": "Pa de vidre amb tomàquet",
+            "alcachofas": "Carxofes confitades amb romesco",
+            "bravas": "Braves a l'estil Montgust",
+            "torreznos": "Torreznos de Soria",
+            "croquetas": "Surtit de croquetes",
+            "croquetas_desc": "Cuinat, bolets i xipiró",
+            "zamburinas": "Zamburiñes a la planxa",
+            "calamarcitos": "Calamarsets a la planxa",
+            "calamarcitos_desc": "Amb picada d'all i julivert",
+            "mejillones": "Musclos a la marinera",
+            "carpaccio_buey": "Carpaccio de bou",
+            "carpaccio_buey_desc": "Amb virutes de parmesà",
+            "carpaccio_bacalao": "Carpaccio de bacallà fumat",
+            "carpaccio_bacalao_desc": "Amb fruits secs",
+            "tabla_jamon": "Taula de pernil ibèric i formatge",
+            "tabla_jamon_desc": "Semicurat amb pa de vidre i tomàquet",
+            "burrata": "Amanida de burrata",
+            "burrata_desc": "Amb vinagreta al pesto",
+            "langostinos": "Amanida tèbia de llagostins",
+            "entrecot": "Entrecot a la brasa",
+            "entrecot_desc": "Amb guarnició",
+            "solomillo": "Solomillo de vedella",
+            "solomillo_desc": "A la brasa amb guarnició",
+            "parrillada": "Parrillada de marisc",
+            "parrillada_desc": "Clpessines, musclos, gambes, escamarlans, sèpia i llamàntol (mín. 2 px)",
+            "secreto": "Secret de porc ibèric",
+            "secreto_desc": "A la brasa amb patates fregides",
+            "pulpo": "Pop a la brasa",
+            "pulpo_desc": "Amb patates i romesco",
+            "steak_tartar": "Steak tàrtar de vedella",
+            "gambas": "Gambes a la planxa",
+            "sepia": "Sèpia a la planxa amb allioli",
+            "paella_marinera": "Paella marinera estil Montgust",
+            "paella_desc": "Preu per persona",
+            "arroz_bogavante": "Arròs caldós de llamàntol",
+            "paella_bogavante": "Paella de llamàntol",
+            "paella_bogavante_desc": "Amb cloïsses i musclos (Preu per persona)",
+            "arroz_pulpo": "Arròs melós de pop i escamarlà",
+            "pollo_crujiente": "Solomillo de pollastre cruixent",
+            "macarrones": "Macarrons a la bolonyesa",
+            "brownie": "Brownie de xocolata",
+            "brownie_desc": "Amb gelat de vainilla",
+            "tarta_manzana": "Pastís de poma",
+            "tarta_queso": "Pastís de formatge amb fruits secs",
+            "coulant": "Coulant de xocolata amb gelat",
+            "sorbetes": "Surtit de sorbets",
+            "menu_25_50": "Menú celebració 25.50",
+            "menu_25_50_desc": "Menú complet per a grups amb surtit d'entrants i postres.",
+            "menu_26_50": "Menú celebració 26.50",
+            "menu_26_50_desc": "Menú amb entrants a compartir, plat principal a escollir i postres.",
+            "menu_29_50": "Menú celebració 29.50",
+            "menu_29_50_desc": "La nostra opció més prèmium amb llobarro o solomillo barbacoa."
+        },
+        "details": "Veure detalls",
+        "ingredients": "Ingredients",
+        "allergens": "Al·lèrgens",
+        "close": "Tancar",
+        "modal": {
+            "click_for_full": "Fes clic per veure el menú complet",
+            "price_per_person": "€ / persona",
+            "gallery": "Galeria",
+            "coming_soon": "Pròximament més fotos",
+            "footer_note": "* Aquest menú és vàlid per a aniversaris, festes privades i celebracions especials. Decorem el local al seu gust.",
+            "includes": "Inclou",
+            "includes_desc": "Pa, aigua, vi i cafè"
+        }
+    },
+    "schedule": {
+        "badge": "Horari",
+        "title": "Quan visitar-nos",
+        "days": {
+            "monday": "Dilluns",
+            "tuesday": "Dimarts",
+            "wednesday": "Dimecres",
+            "thursday": "Dijous",
+            "friday": "Divendres",
+            "saturday": "Dissabte",
+            "sunday": "Diumenge"
+        },
+        "status": {
+            "closed": "Tancat",
+            "open": "Obert",
+            "lunch": "Dinars",
+            "dinner": "Sopars"
+        }
+    },
+    "reviews": {
+        "badge": "Opinions",
+        "title": "El que diuen els nostres clients",
+        "google_maps": "Veure a Google Maps"
+    },
+    "contact": {
+        "badge": "Contacte",
+        "title": "Reserva la teva taula",
+        "info": {
+            "address": "Adreça",
+            "phone": "Trucades i WhatsApp",
+            "instagram": "Instagram"
+        },
+        "address": {
+            "title": "Adreça",
+            "value": "Carrer de Cambrils, 15, Mont-roig del Camp"
+        },
+        "phone": {
+            "title": "Telèfon"
+        },
+        "hours": {
+            "title": "Horari",
+            "value": "Dim-Diu · 08:30 - 16:30"
+        },
+        "reservations": {
+            "title": "Vols reservar?",
+            "desc": "Truca'ns o contacta per WhatsApp per reservar la teva taula.",
+            "call": "Trucar",
+            "whatsapp": "WhatsApp",
+            "how_to_get": "Com arribar"
+        },
+        "buttons": {
+            "whatsapp": "Contactar per WhatsApp",
+            "follow": "Seguir a Instagram",
+            "online": "Reservar taula online"
+        },
+        "map": {
+            "title": "Com arribar",
+            "desc": "Estem ubicats al Carrer de Cambrils, 15 a Mont-roig del Camp.",
+            "cta": "Obrir a Google Maps"
+        }
+    },
+    "footer": {
+        "desc": "Restaurant de cuina mediterrània on la tradició es troba amb la innovació. Ingredients frescos, sabors autèntics i un ambient únic.",
+        "links": "Enllaços",
+        "info": "Informació",
+        "rights": "© 2026 Mont-Gust. Tots els drets reservats."
+    },
+    "music": {
+        "station": "Mont-Gust Jazz",
+        "ambient": "Sintonia ambient"
+    },
+    "news": {
+        "title": "Novetats i esdeveniments",
+        "subtitle": "Assabenta't de l'últim a Mont-Gust",
+        "coming_soon": "Properament publicarem les nostres últimes novetats...",
+        "back_home": "Tornar a l'inici",
+        "calcotada": {
+            "title": "Menú calçotada",
+            "category": "Temporada",
+            "description": "Viu l'autèntica experiència tradicional catalana amb el nostre menú complet de calçotada.",
+            "sharing": "Per compartir",
+            "croquettes": "Surtit de croquetes casolanes (de bullit i de bolets variats)",
+            "calcots": "20 unitats de calçots de la zona de Mont-roig del Camp amb salsa romesco",
+            "second": "Segon (a escollir)",
+            "meat_grill": "Garrillada de carn: llonganissa, xulla de xai, cansalada i secret de porc, amb les seves salses, patates i escalivada",
+            "dessert": "Postres",
+            "crema_catalana": "Crema catalana",
+            "includes": "Inclou",
+            "drinks": "Vi, aigua i cafè o refresc o cervesa",
+            "price": "23€",
+            "reservation": "Menú especial disponible només amb reserva prèvia"
+        },
+        "tapas_menu": {
+            "title": "Nit de tapes",
+            "category": "Promoció",
+            "description": "Una oferta especial per als amants de les tapes.",
+            "schedule": "Tots els dijous (20:30 a 23:00)",
+            "offer": "Per 4.5€ gaudeix de 3 tapes + cervesa, vi o refesc",
+            "tagline": "Tapes casolanes · Bon ambient",
+            "price": "4.5€",
+            "reservation": "T'esperem!"
+        }
+    }
+}

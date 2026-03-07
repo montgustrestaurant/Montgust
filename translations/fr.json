@@ -1,0 +1,244 @@
+{
+    "nav": {
+        "home": "Accueil",
+        "menu": "Carte",
+        "schedule": "Horaires",
+        "essence": "Notre essence",
+        "news": "Nouveautés",
+        "contact": "Contact"
+    },
+    "hero": {
+        "slide1": {
+            "title": "Bienvenue chez Mont-Gust",
+            "subtitle": ""
+        },
+        "slide2": {
+            "title": "Une expérience unique",
+            "subtitle": "Profitez de chaque instant avec nous"
+        },
+        "slide3": {
+            "title": "Saveurs de la mer",
+            "subtitle": "Fraîcheur et qualité dans chaque plat"
+        },
+        "cta": "Voir la carte"
+    },
+    "essence": {
+        "badge": "Notre Essence",
+        "title": "Ce qui nous rend différents",
+        "features": {
+            "takeaway": {
+                "name": "Paellas à emporter",
+                "desc": "Dégustez nos paellas maison chez vous, prêtes pour toutes les occasions.",
+                "cta": "Réserver"
+            },
+            "homemade": {
+                "name": "Cuisine maison",
+                "desc": "Plats traditionnels aux saveurs de toujours, préparés avec amour.",
+                "cta": "Voir la carte"
+            },
+            "events": {
+                "name": "Célébrations d'anniversaires",
+                "desc": "Nous rendons votre journée spéciale inoubliable avec des menus adaptés.",
+                "cta": "Informations"
+            },
+            "business": {
+                "name": "Déjeuners et dîners d'affaires",
+                "desc": "Des espaces confortables et des menus pensés pour vos réunions de travail.",
+                "cta": "Voir les espaces"
+            },
+            "ac": {
+                "name": "Climatisation",
+                "desc": "Venez savourer votre repas dans une ambiance fraîche et agréable.",
+                "cta": "Nous rendre visite"
+            },
+            "inclusive": {
+                "name": "Adapté à tous",
+                "desc": "Si vous êtes allergique, intolérant ou végétalien, nous avons des options pour vous.",
+                "cta": "Voir les options"
+            }
+        }
+    },
+    "menu": {
+        "badge": "Notre carte",
+        "title": "Des saveurs qui enchantent",
+        "categories": {
+            "tapas": "Tapas & entrées",
+            "ensaladas": "Salades",
+            "paellas": "Nos paellas",
+            "carnes": "Viandes grillées",
+            "postres": "Desserts maison",
+            "kids": "Enfant",
+            "celebration": "Célébration"
+        },
+        "items": {
+            "pan_cristal": "Pain cristal à la tomate",
+            "alcachofas": "Artichauts confits au romesco",
+            "bravas": "Bravas style Montgust",
+            "torreznos": "Torreznos de Soria",
+            "croquetas": "Assortiment de croquettes",
+            "croquetas_desc": "Pot-au-feu, champignons et seiche",
+            "zamburinas": "Pétoncles grillés",
+            "calamarcitos": "Petits calamars grillés",
+            "calamarcitos_desc": "À l'ail et au persil",
+            "mejillones": "Moules à la marinière",
+            "carpaccio_buey": "Carpaccio de bœuf",
+            "carpaccio_buey_desc": "Aux copeaux de parmesan",
+            "carpaccio_bacalao": "Carpaccio de morue fumée",
+            "carpaccio_bacalao_desc": "Aux fruits secs",
+            "tabla_jamon": "Planche de jambon ibérique et fromage",
+            "tabla_jamon_desc": "Semi-affiné avec pain cristal et tomate",
+            "burrata": "Salade de burrata",
+            "burrata_desc": "À la vinaigrette au pesto",
+            "langostinos": "Salade tiède de gambas",
+            "entrecot": "Entrecôte grillée",
+            "entrecot_desc": "Avec garniture",
+            "solomillo": "Filet de bœuf",
+            "solomillo_desc": "Grillé avec garniture",
+            "parrillada": "Grillade de fruits de mer",
+            "parrillada_desc": "Palourdes, moules, crevettes, langoustines, seiche et homard (min. 2 px)",
+            "secreto": "Secret de porc ibérique",
+            "secreto_desc": "Grillé avec frites",
+            "pulpo": "Poulpe grillé",
+            "pulpo_desc": "Avec pommes de terre et romesco",
+            "steak_tartar": "Steak tartare de bœuf",
+            "gambas": "Gambas à la planche",
+            "sepia": "Seiche à la planche avec aïoli",
+            "paella_marinera": "Paella aux fruits de mer style Montgust",
+            "paella_desc": "Prix par personne",
+            "arroz_bogavante": "Riz au homard",
+            "paella_bogavante": "Paella au homard",
+            "paella_bogavante_desc": "Aux palourdes et moules (Prix par personne)",
+            "arroz_pulpo": "Riz onctueux au poulpe et langoustine",
+            "pollo_crujiente": "Filet de poulet croustillant",
+            "macarrones": "Macaronis à la bolognaise",
+            "brownie": "Brownie au chocolat",
+            "brownie_desc": "Avec glace vanille",
+            "tarta_manzana": "Tarte aux pommes",
+            "tarta_queso": "Cheesecake aux fruits secs",
+            "coulant": "Coulant au chocolat avec glace",
+            "sorbetes": "Assortiment de sorbets",
+            "menu_25_50": "Menu célébration 25.50",
+            "menu_25_50_desc": "Menu complet pour groupes avec assortiment d'entrées et dessert.",
+            "menu_26_50": "Menu célébration 26.50",
+            "menu_26_50_desc": "Menu avec entrées à partager, plat principal au choix et dessert.",
+            "menu_29_50": "Menu célébration 29.50",
+            "menu_29_50_desc": "Notre option premium avec bar au four ou filet de porc BBQ."
+        },
+        "details": "Voir détails",
+        "ingredients": "Ingrédients",
+        "allergens": "Allergènes",
+        "close": "Fermer",
+        "modal": {
+            "click_for_full": "Cliquez pour voir le menu complet",
+            "price_per_person": "€ / personne",
+            "gallery": "Galerie",
+            "coming_soon": "Plus de photos bientôt",
+            "footer_note": "* Ce menu est valable pour les anniversaires, fêtes privées et célébrations spéciales. Nous décorons le local à votre goût.",
+            "includes": "Inclus",
+            "includes_desc": "Pain, eau, vin et café"
+        }
+    },
+    "schedule": {
+        "badge": "Horaires",
+        "title": "Quand nous rendre visite",
+        "days": {
+            "monday": "Lundi",
+            "tuesday": "Mardi",
+            "wednesday": "Mercredi",
+            "thursday": "Jeudi",
+            "friday": "Vendredi",
+            "saturday": "Samedi",
+            "sunday": "Dimanche"
+        },
+        "status": {
+            "closed": "Fermé",
+            "open": "Ouvert",
+            "lunch": "Midi",
+            "dinner": "Soir"
+        }
+    },
+    "reviews": {
+        "badge": "Avis",
+        "title": "Ce que nos clients disent",
+        "google_maps": "Voir sur Google Maps"
+    },
+    "contact": {
+        "badge": "Contact",
+        "title": "Réservez votre table",
+        "info": {
+            "address": "Adresse",
+            "phone": "Appels & WhatsApp",
+            "instagram": "Instagram"
+        },
+        "address": {
+            "title": "Adresse",
+            "value": "Carrer de Cambrils, 15, Mont-roig del Camp"
+        },
+        "phone": {
+            "title": "Téléphone"
+        },
+        "hours": {
+            "title": "Horaires",
+            "value": "Mar-Dim · 08:30 - 16:30"
+        },
+        "reservations": {
+            "title": "Vous voulez réserver ?",
+            "desc": "Appelez-nous ou contactez-nous par WhatsApp pour réserver votre table.",
+            "call": "Appeler",
+            "whatsapp": "WhatsApp",
+            "how_to_get": "Comment s'y rendre"
+        },
+        "buttons": {
+            "whatsapp": "Contact par WhatsApp",
+            "follow": "Suivre sur Instagram",
+            "online": "Réserver en ligne"
+        },
+        "map": {
+            "title": "Comment s'y rendre",
+            "desc": "Nous sommes situés au Carrer de Cambrils, 15 à Mont-roig del Camp.",
+            "cta": "Ouvrir Google Maps"
+        }
+    },
+    "footer": {
+        "desc": "Restaurant de cuisine méditerranéenne où la tradition rencontre l'innovation. Ingrédients frais, saveurs authentiques et ambiance unique.",
+        "links": "Liens",
+        "info": "Informations",
+        "rights": "© 2026 Mont-Gust. Tous droits réservés."
+    },
+    "music": {
+        "station": "Mont-Gust Jazz",
+        "ambient": "Ambiance sonore"
+    },
+    "news": {
+        "title": "Nouveautés & événements",
+        "subtitle": "Découvrez les dernières nouvelles de Mont-Gust",
+        "coming_soon": "Nos dernières nouveautés seront publiées prochainement...",
+        "back_home": "Retour à l'accueil",
+        "calcotada": {
+            "title": "Menu calçotada",
+            "category": "Saisonnier",
+            "description": "Vivez l'authentique expérience traditionnelle catalane avec notre menu complet de calçotada.",
+            "sharing": "À partager",
+            "croquettes": "Assortiment de croquettes maison (pot-au-feu et champignons variés)",
+            "calcots": "20 unités de calçots de la région de Mont-roig del Camp avec sauce romesco",
+            "second": "Second plat (au choix)",
+            "meat_grill": "Grillade de viande : saucisse, côtelette d'agneau, poitrine et 'secreto' de porc, avec ses sauces, pommes de terre et légumes grillés",
+            "dessert": "Dessert",
+            "crema_catalana": "Crème catalane",
+            "includes": "Inclus",
+            "drinks": "Vin, eau et café ou boisson non alcoolisée ou bière",
+            "price": "23€",
+            "reservation": "Menu spécial disponible uniquement sur réservation préalable"
+        },
+        "tapas_menu": {
+            "title": "Soirée tapas",
+            "category": "Promotion",
+            "description": "Une offre spéciale pour les amateurs de tapas.",
+            "schedule": "Tous les jeudis (20:30 à 23:00)",
+            "offer": "Pour seulement 4,50€, profitez de 3 tapas + bière, vin ou boisson sans alcool",
+            "tagline": "Tapas maison · Bonne ambiance",
+            "price": "4,50€",
+            "reservation": "On vous attend !"
+        }
+    }
+}
