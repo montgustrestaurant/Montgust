@@ -98,8 +98,8 @@ export function ContactSection() {
                 <ContactInfoCard
                   icon={Phone}
                   title={t("contact.phone.title")}
-                  content="+34 977 72 32 60"
-                  href="tel:+34977723260"
+                  content="+34 603 74 48 47"
+                  href="tel:+34603744847"
                 />
               </div>
 
@@ -122,7 +122,7 @@ export function ContactSection() {
                       className="group flex-1 items-center gap-2 rounded-xl bg-primary text-primary-foreground shadow-md transition-all hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5"
                       asChild
                     >
-                      <a href="tel:+34977723260">
+                      <a href="tel:+34603744847">
                         <Phone size={18} />
                         {t("contact.reservations.call")}
                       </a>
@@ -134,7 +134,7 @@ export function ContactSection() {
                       asChild
                     >
                       <a
-                        href="http://wa.me/34977723260"
+                        href="http://wa.me/34603744847"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
