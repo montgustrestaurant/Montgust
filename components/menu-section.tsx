@@ -30,7 +30,7 @@ export function MenuSection() {
   }, [])
 
   const categories = useMemo(() => [
-    { id: "daily", label: t("menu.categories.daily"), href: "https://www.instagram.com/mont_gust/" },
+    { id: "daily", label: t("menu.categories.daily"), href: "https://www.instagram.com/montgust_restaurant/" },
     { id: "compartir", label: t("menu.categories.tapas") },
     { id: "ensaladas", label: t("menu.categories.ensaladas") || "Ensaladas" },
     { id: "fuertes", label: t("menu.categories.carnes") },
@@ -246,10 +246,10 @@ export function MenuSection() {
                     key={cat.id}
                     onClick={() => !cat.href && setActiveCategory(cat.id)}
                     className={`whitespace-nowrap flex-shrink-0 snap-center rounded-full px-6 py-2.5 text-sm font-bold tracking-wide transition-all ${activeCategory === cat.id
-                        ? "bg-primary text-primary-foreground shadow-md ring-2 ring-primary ring-offset-2 ring-offset-background"
-                        : isDaily
-                          ? "bg-primary/10 text-primary border-2 border-primary/50 shadow-[0_0_15px_rgba(var(--primary),0.3)] animate-pulse-subtle"
-                          : "bg-secondary/60 text-secondary-foreground hover:bg-secondary border border-border/50"
+                      ? "bg-primary text-primary-foreground shadow-md ring-2 ring-primary ring-offset-2 ring-offset-background"
+                      : isDaily
+                        ? "bg-primary/10 text-primary border-2 border-primary/50 shadow-[0_0_15px_rgba(var(--primary),0.3)] animate-pulse-subtle"
+                        : "bg-secondary/60 text-secondary-foreground hover:bg-secondary border border-border/50"
                       }`}
                   >
                     {cat.label}

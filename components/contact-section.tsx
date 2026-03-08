@@ -149,7 +149,7 @@ export function ContactSection() {
               {/* Social Links */}
               <div className="flex items-center justify-center pt-2">
                 <a
-                  href="https://www.instagram.com/mont_gust/"
+                  href="https://www.instagram.com/montgust_restaurant/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-3 rounded-full border border-border/50 bg-card px-6 py-3 transition-all hover:border-primary/30 hover:shadow-md"
