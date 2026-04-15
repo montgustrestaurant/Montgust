@@ -49,11 +49,9 @@ export function MenuSection() {
       { name: t("menu.items.bravas"), description: "", price: "7.90", image: "/montgust/platos/carta/para_compartir/bravas.png", allergens: ["veg"] },
       { name: t("menu.items.torreznos"), description: "", price: "11.50", image: "/montgust/platos/carta/para_compartir/torreznos.png" },
       { name: t("menu.items.croquetas"), description: t("menu.items.croquetas_desc"), price: "10.80", image: "/montgust/platos/carta/para_compartir/croquetas.png", allergens: ["veg", "egg", "shell"] },
-      { name: t("menu.items.zamburinas"), description: "", price: "13.00", image: "/montgust/platos/carta/para_compartir/zamburiñas.jpeg", allergens: ["shell"] },
       { name: t("menu.items.calamarcitos"), description: t("menu.items.calamarcitos_desc"), price: "14.50", image: "/montgust/platos/carta/para_compartir/calamarcitos.png", allergens: ["shell"] },
       { name: t("menu.items.mejillones"), description: "", price: "11.90", image: "/montgust/platos/carta/para_compartir/mejillones.png", allergens: ["shell", "veg"] },
       { name: t("menu.items.carpaccio_buey"), description: t("menu.items.carpaccio_buey_desc"), price: "11.90", image: "/placeholder.jpg", allergens: ["milk"] },
-      { name: t("menu.items.carpaccio_bacalao"), description: t("menu.items.carpaccio_bacalao_desc"), price: "14.50", image: "/placeholder.jpg", allergens: ["fish", "nut"] },
       { name: t("menu.items.tabla_jamon"), description: t("menu.items.tabla_jamon_desc"), price: "19.90", image: "/placeholder.jpg", allergens: ["veg", "milk"] },
     ],
     ensaladas: [
@@ -64,11 +62,11 @@ export function MenuSection() {
       { name: t("menu.items.entrecot"), description: t("menu.items.entrecot_desc"), price: "19.50", image: "/montgust/platos/carta/platos_fuertes/entrecot.png" },
       { name: t("menu.items.solomillo"), description: t("menu.items.solomillo_desc"), price: "19.50", image: "/montgust/platos/carta/platos_fuertes/solomillo.jpeg" },
       { name: t("menu.items.parrillada"), description: t("menu.items.parrillada_desc"), price: "26.90", image: "/montgust/platos/carta/platos_fuertes/parrillada.png", allergens: ["crust", "shell"] },
-      { name: t("menu.items.secreto"), description: t("menu.items.secreto_desc"), price: "14.90", image: "/placeholder.jpg" },
+      { name: t("menu.items.secreto"), description: t("menu.items.secreto_desc"), price: "14.90", image: "/montgust/platos/carta/platos_fuertes/secretoiberico.png" },
       { name: t("menu.items.pulpo"), description: t("menu.items.pulpo_desc"), price: "19.50", image: "/placeholder.jpg", allergens: ["shell", "milk", "nut"] },
-      { name: t("menu.items.steak_tartar"), description: "", price: "19.50", image: "/placeholder.jpg", allergens: ["veg", "egg"] },
-      { name: t("menu.items.gambas"), description: "", price: "14.50", image: "/placeholder.jpg", allergens: ["crust"] },
-      { name: t("menu.items.sepia"), description: "", price: "14.90", image: "/placeholder.jpg", allergens: ["shell", "egg"] },
+      { name: t("menu.items.steak_tartar"), description: "", price: "19.50", image: "/montgust/platos/carta/platos_fuertes/steak.png", allergens: ["veg", "egg"] },
+      { name: t("menu.items.chuleta_cordero"), description: t("menu.items.chuleta_cordero_desc"), price: "16.50", image: "/montgust/platos/carta/platos_fuertes/corderoguarnicion.png" },
+      { name: t("menu.items.sepia"), description: "", price: "14.90", image: "/montgust/platos/carta/platos_fuertes/sepia.png", allergens: ["shell", "egg"] },
     ],
     arroces: [
       { name: t("menu.items.paella_marinera"), description: t("menu.items.paella_desc"), price: "14.90", image: "/montgust/platos/carta/arroces/arroz_marinera.png", allergens: ["crust", "fish", "veg"] },
@@ -83,8 +81,8 @@ export function MenuSection() {
     postres: [
       { name: t("menu.items.brownie"), description: t("menu.items.brownie_desc"), price: "5.50", image: "/montgust/platos/carta/postres/brownie.png", allergens: ["veg", "milk", "nut"] },
       { name: t("menu.items.tarta_manzana"), description: "", price: "5.50", image: "/montgust/platos/carta/postres/tarta_manzana.png", allergens: ["veg", "egg", "milk"] },
-      { name: t("menu.items.tarta_queso"), description: "", price: "4.90", image: "/placeholder.jpg", allergens: ["veg", "milk", "nut"] },
-      { name: t("menu.items.coulant"), description: "", price: "5.90", image: "/placeholder.jpg", allergens: ["veg", "milk", "egg"] },
+      { name: t("menu.items.tarta_queso"), description: "", price: "4.90", image: "/montgust/platos/carta/postres/tarta_queso.png", allergens: ["veg", "milk", "nut"] },
+      { name: t("menu.items.coulant"), description: "", price: "5.90", image: "/montgust/platos/carta/postres/coulant.png", allergens: ["veg", "milk", "egg"] },
       { name: t("menu.items.sorbetes"), description: "", price: "5.90", image: "/placeholder.jpg", allergens: ["veg"] },
     ],
     celebracion: [

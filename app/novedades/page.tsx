@@ -110,8 +110,13 @@ export default function NovedadesPage() {
             </section>
 
             {/* Carousel Section */}
-            <section className="flex-1 py-10 md:py-20 bg-background overflow-hidden">
-                <Carousel items={cards} />
+            <section className="flex-1 py-10 md:py-20 bg-background flex flex-col items-center justify-center">
+                <div className="text-center px-6 max-w-2xl mx-auto py-12 md:py-24 bg-secondary/10 rounded-3xl border border-border/50">
+                    <IconMessage className="mx-auto mb-4 text-muted-foreground w-12 h-12 opacity-50" />
+                    <p className="text-xl md:text-2xl text-muted-foreground font-medium">
+                        {t("news.coming_soon")}
+                    </p>
+                </div>
             </section>
 
             <Footer />
