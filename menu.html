@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MontGust - Menú y Carta</title>
+<link rel="icon" type="image/png" href="logo_montgust.png">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Poppins', sans-serif; background-color: #f9f6f2; color: #333; overflow-x: hidden; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background-color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; flex-wrap: wrap; }
+.logo-container { display: flex; align-items: center; gap: 8px; }
+.logo-container img { height: 45px; width: auto; border-radius: 10px; }
+.logo { font-size: 1.5em; font-weight: bold; color: #b47c44; transition: transform 0.3s ease; }
+.logo:hover { transform: scale(1.05); }
+nav { display: flex; align-items: center; }
+nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin: 0; }
+nav a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; font-size: 0.95em; }
+nav a:hover, nav a.active { color: #b47c44; }
+.menu-toggle { display: none; flex-direction: column; justify-content: center; cursor: pointer; width: 30px; height: 25px; gap: 5px; }
+.menu-toggle div { width: 100%; height: 3px; background-color: #333; border-radius: 2px; transition: all 0.3s ease; }
+
+/* Hero Menú Diario */
+.menu-hero { background: url('fotomenusala.jpg') center center / cover no-repeat; min-height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; position: relative; padding: 60px 20px; }
+.menu-hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.35); border-radius: 10px; }
+.menu-hero-content { position: relative; z-index: 1; max-width: 90%; }
+.menu-hero h2 { font-size: 2.5em; margin-bottom: 15px; color: #b47c44; }
+.menu-hero p { font-size: 1.2em; line-height: 1.5; }
+
+.arrow-container { margin: 25px 0; display: flex; justify-content: center; animation: bounce 1.5s infinite; }
+.arrow { width: 30px; height: 30px; border-bottom: 4px solid #b47c44; border-right: 4px solid #b47c44; transform: rotate(45deg); cursor: pointer; }
+@keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(10px); } 60% { transform: translateY(5px); } }
+
+.btn { background-color: #b47c44; color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; display: inline-block; transition: transform 0.3s, background-color 0.3s; font-size: 1em; }
+.btn:hover { transform: scale(1.05); background-color: #a03c18; }
+
+section.carta { padding: 60px 20px; text-align: center; }
+.carta h2 { color: #b47c44; font-size: 2em; margin-bottom: 20px; }
+.carta h3 { color: #b47c44; font-size: 1.5em; margin-top: 40px; margin-bottom: 15px; }
+.carta p { max-width: 700px; margin: 0 auto 25px auto; line-height: 1.6; font-size: 1.1em; }
+.menu-img { max-width: 100%; margin: 15px 0; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+/* Carrusel */
+.carousel-container { position: relative; max-width: 700px; margin: 30px auto; overflow: hidden; border-radius: 10px; }
+.carousel-track { display: flex; transition: transform 0.4s ease-in-out; }
+.carousel-slide { min-width: 100%; transition: 0.4s; }
+.carousel-slide img { width: 100%; display: block; border-radius: 10px; }
+.carousel-button { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(180,124,68,0.8); border: none; color: white; padding: 10px; cursor: pointer; border-radius: 50%; font-size: 1.2em; transition: background 0.3s; }
+.carousel-button:hover { background-color: rgba(160,60,24,0.8); }
+.prev { left: 10px; }
+.next { right: 10px; }
+
+footer { text-align: center; background-color: #fff; padding: 20px; font-size: 0.9em; color: #777; }
+
+/* Móvil */
+@media (max-width: 768px) {
+.menu-toggle { display: flex; }
+nav { display: none; width: 100%; }
+nav.active { display: flex; justify-content: center; background-color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+nav ul { flex-direction: column; align-items: center; gap: 12px; padding: 20px 0; }
+header { flex-wrap: nowrap; }
+.menu-hero h2 { font-size: 1.8em; }
+.menu-hero p { font-size: 1em; }
+}
+
+/* PC: cambiar imagen de fondo */
+@media (min-width: 769px) {
+.menu-hero { background: url('fotomenusala_pc.JPG') center center / cover no-repeat; }
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo-container">
+<img src="logo_montgust.png" alt="Logo MontGust">
+<div class="logo">MontGust</div>
+</div>
+<div class="menu-toggle" id="menu-toggle">
+<div></div><div></div><div></div>
+</div>
+<nav id="nav">
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="menu.html" class="active">Menú y carta</a></li>
+<li><a href="horario.html">Horario</a></li>
+<li><a href="diferencias.html">Nuestra esencia</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+<li><a href="novedades.html">Novedades</a></li>
+<li><a href="colabora.html">Colabora</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="menu-hero">
+<div class="menu-hero-content">
+<h2>Menú Diario</h2>
+<p>En MontGust tenemos un menú diario que cambia cada día, ¡y siempre actualizado en nuestro Instagram! <br>Ven a descubrir qué delicias hemos preparado hoy.</p>
+</div>
+</section>
+
+<div class="arrow-container">
+<a href="https://www.instagram.com/montgust_restaurant/" target="_blank">
+<div class="arrow"></div>
+</a>
+</div>
+
+<div style="text-align:center; margin-bottom:60px;">
+<a href="https://www.instagram.com/montgust_restaurant/" class="btn" target="_blank">Ver menú diario en Instagram</a>
+</div>
+
+<section class="carta">
+<h2>Carta</h2>
+
+<!-- Carrusel Español -->
+<h3>Carta en Español</h3>
+<div class="carousel-container" id="carousel-es">
+<div class="carousel-track">
+<div class="carousel-slide"><img src="cartaunoesp.jpg" alt="Carta 1 Español"></div>
+<div class="carousel-slide"><img src="cartadosesp.jpg" alt="Carta 2 Español"></div>
+</div>
+<button class="carousel-button prev" onclick="moveSlide('es', -1)">&#10094;</button>
+<button class="carousel-button next" onclick="moveSlide('es', 1)">&#10095;</button>
+</div>
+
+<!-- Carrusel Catalán -->
+<h3>Carta en Catalán</h3>
+<div class="carousel-container" id="carousel-cat">
+<div class="carousel-track">
+<div class="carousel-slide"><img src="cartaunocat.jpg" alt="Carta 1 Catalán"></div>
+<div class="carousel-slide"><img src="cartadoscat.jpg" alt="Carta 2 Catalán"></div>
+</div>
+<button class="carousel-button prev" onclick="moveSlide('cat', -1)">&#10094;</button>
+<button class="carousel-button next" onclick="moveSlide('cat', 1)">&#10095;</button>
+</div>
+
+<h3>Menús de Celebración</h3>
+<p>Si quieres celebrar con nosotros, te ofrecemos menús especiales.<br> Aquí tienes algunas opciones:</p>
+<img src="menu_celebracion1.jpg" alt="Menú Celebración 1" class="menu-img">
+<img src="menu_celebracion2.jpg" alt="Menú Celebración 2" class="menu-img">
+<img src="menu_celebracion3.jpg" alt="Menú Celebración 3" class="menu-img">
+<p>Para pedidos especiales o reservas, contáctanos y haremos que tu experiencia sea única.</p>
+</section>
+
+<footer>
+<p>© 2025 MontGust | Mont-roig del Camp</p>
+</footer>
+
+<script>
+const toggle = document.getElementById('menu-toggle');
+const nav = document.getElementById('nav');
+toggle.addEventListener('click', () => {
+nav.classList.toggle('active');
+toggle.classList.toggle('open');
+});
+
+// Carrusel
+const carouselState = { es: 0, cat: 0 };
+function moveSlide(carousel, direction) {
+const container = document.getElementById('carousel-' + carousel);
+const track = container.querySelector('.carousel-track');
+const slides = track.children;
+carouselState[carousel] += direction;
+if (carouselState[carousel] < 0) carouselState[carousel] = slides.length - 1;
+if (carouselState[carousel] >= slides.length) carouselState[carousel] = 0;
+track.style.transform = 'translateX(-' + carouselState[carousel] * 100 + '%)';
+}
+</script>
+</body>
+</html>
+

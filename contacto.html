@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>MontGust - Contacto</title>
+<link rel="icon" type="image/png" href="logo_montgust.png">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f6f2;
+    color: #333;
+    overflow-x: hidden;
+  }
+
+  header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 20px;
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:100;
+    flex-wrap:wrap;
+  }
+
+  .logo-container{ display:flex; align-items:center; gap:8px; }
+  .logo-container img{ height:45px; width:auto; border-radius:10px; }
+  .logo{ font-size:1.4em; font-weight:700; color:#b47c44; }
+
+  nav{ display:flex; align-items:center; }
+  nav ul{ display:flex; gap:15px; list-style:none; margin:0; padding:0; align-items:center; }
+  nav a{ text-decoration:none; color:#333; font-weight:500; transition:color .2s; font-size:.95rem; }
+  nav a:hover, nav a.active{ color:#b47c44; }
+
+  .menu-toggle{ display:none; flex-direction:column; justify-content:center; cursor:pointer; width:30px; height:25px; gap:5px; }
+  .menu-toggle div{ width:100%; height:3px; background:#333; border-radius:2px; transition:all .3s ease; }
+
+  main {
+    max-width:1100px;
+    margin: 30px auto;
+    padding: 0 18px 100px; /* padding-bottom por defecto */
+    min-height: calc(100vh - 80px); /* asegura altura mínima */
+  }
+
+  .hero {
+    background: linear-gradient(180deg, rgba(180,124,68,0.06), rgba(180,124,68,0.02));
+    border-radius: 12px;
+    padding: 26px;
+    margin-bottom: 22px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .hero h1{ color:#b47c44; font-size:1.6rem; }
+  .hero p{ color:#444; line-height:1.5; }
+
+  .contact-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-top: 10px;
+  }
+
+  .card {
+    background:#fff;
+    border-radius:12px;
+    padding:18px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  }
+
+  .card h3{ color:#b47c44; margin-bottom:8px; font-size:1.05rem; }
+  .tel, .insta, .reserva { display:flex; flex-direction:column; gap:8px; font-size:1rem; color:#333; }
+  .tel a, .insta a, .reserva a { color:#333; text-decoration:none; font-weight:600; }
+  .tel a:hover, .insta a:hover, .reserva a:hover { color:#b47c44; }
+
+  .reserva { align-items: center; }
+
+  .btn-reserva {
+    display:inline-block;
+    background:#b47c44;
+    color:#fff;
+    padding:10px 16px;
+    border-radius:999px;
+    text-decoration:none;
+    font-weight:700;
+    margin-top:8px;
+    text-align:center;
+    width: 100%;
+    max-width: 240px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  .btn-reserva:hover { background:#9a6036; transform: scale(1.05); }
+
+  .btn-wrap { margin:16px 0; text-align:center; }
+
+  .map-wrap {
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  }
+  .map-wrap iframe{ width:100%; height:100%; min-height:300px; border:0; display:block; }
+
+  small.hint{ color:#666; font-size:.9rem; display:block; margin-top:6px; }
+
+  footer {
+    text-align:center;
+    padding:28px 12px;
+    background:#fff;
+    margin-top:40px;
+    border-top:1px solid #eee;
+    color:#666;
+  }
+
+  /* MÓVIL */
+  @media (max-width: 1023px){
+    .menu-toggle{ display:flex; }
+    nav{ display:none; width:100%; }
+    nav.active{ display:flex; justify-content:center; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.08); }
+    nav ul{ flex-direction:column; align-items:center; gap:12px; padding:16px 0; }
+  }
+
+  @media (max-width: 900px){
+    main{ padding: 0 14px 150px; } /* más padding-bottom para móvil */
+    .contact-grid{ grid-template-columns: 1fr; }
+    .map-wrap iframe{ min-height:260px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="logo_montgust.png" alt="MontGust logo">
+    <div class="logo">MontGust</div>
+  </div>
+
+  <div class="menu-toggle" id="menu-toggle" aria-label="Menu">
+    <div></div><div></div><div></div>
+  </div>
+
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="menu.html">Menú y carta</a></li>
+      <li><a href="horario.html">Horario</a></li>
+      <li><a href="diferencias.html">Nuestra esencia</a></li>
+      <li><a href="contacto.html" class="active">Contacto</a></li>
+      <li><a href="novedades.html">Novedades</a></li>
+      <li><a href="colabora.html">Colabora</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Contacto y reservas</h1>
+    <p>
+      Reserva mesa por teléfono o utiliza nuestro sistema online.  
+      También puedes seguirnos en Instagram para ver menús y novedades.
+    </p>
+  </section>
+
+  <div class="contact-grid">
+
+    <!-- Tarjeta Reservas e Instagram -->
+    <div class="card">
+      <h3>Reservas</h3>
+      <div class="tel">
+        <a href="tel:977013862">📞 977 013 862</a>
+        <a href="tel:603744847">📞 603 744 847</a>
+        <small class="hint">Llamadas y WhatsApp</small>
+      </div>
+
+      <h3 style="margin-top:16px;">Instagram</h3>
+      <div class="insta">
+        <a href="https://www.instagram.com/montgust_restaurant/" target="_blank" rel="noopener">📸 @montgust_restaurant</a>
+        <small class="hint">Publicamos cada día nuestro menú y muchas otras novedades. <br> ¡No te lo pierdas!</small>
+      </div>
+
+      <h3 style="margin-top:16px;">Reserva online</h3>
+      <div class="reserva">
+        <a class="btn-reserva"
+           href="https://www.google.com/maps/reserve/v/dine/c/2xSApq35BDE?source=pa"
+           target="_blank" rel="noopener">
+          Reservar mesa online
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjeta Localización -->
+    <div class="card">
+      <h3>Localización</h3>
+      <div class="map-wrap" aria-label="Mapa MontGust">
+        <iframe
+          src="https://www.google.com/maps?q=MontGust%20Mont-roig%20del%20Camp&output=embed"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa MontGust"></iframe>
+      </div>
+
+      <!-- Botón justo debajo del mapa -->
+      <div class="btn-wrap">
+        <a class="btn-reserva"
+           href="https://www.google.com/maps/dir/?api=1&destination=Carrer+de+Cambrils,+15,+43300+Mont-roig+del+Camp"
+           target="_blank" rel="noopener">
+          Cómo llegar
+        </a>
+      </div>
+
+      <p style="margin-top:16px; color:#555; font-size:.98rem;">
+        <strong>Dirección:</strong> Carrer de Cambrils, 15, 43300 Mont-roig del Camp, Tarragona<br>
+        <strong>Horario:</strong> mira nuestra página <a href="horario.html" style="color:#b47c44; font-weight:600; text-decoration:none;">Horario</a>.
+      </p>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2025 MontGust | Mont-roig del Camp</p>
+</footer>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav');
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    toggle.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

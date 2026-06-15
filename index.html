@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MontGust - Restaurante en Mont-roig del Camp</title>
+
+<!-- Favicon moderno -->
+<link rel="icon" type="image/png" href="logo_montgust.png">
+<!-- Favicon para navegadores antiguos -->
+<link rel="shortcut icon" href="logo_montgust.ico" type="image/x-icon">
+<!-- Favicon para iOS / móviles -->
+<link rel="apple-touch-icon" sizes="180x180" href="logo_montgust.png">
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f6f2;
+  color: #333;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-wrap: wrap;
+}
+
+.logo-container { display: flex; align-items: center; gap: 8px; }
+.logo-container img { height: 45px; width: auto; border-radius: 10px; }
+.logo { font-size: 1.5em; font-weight: bold; color: #b47c44; transition: transform 0.3s ease; }
+.logo:hover { transform: scale(1.05); }
+
+nav { display: flex; align-items: center; }
+nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin: 0; }
+nav a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; font-size: 0.95em; }
+nav a:hover, nav a.active { color: #b47c44; }
+
+.menu-toggle { display: none; flex-direction: column; justify-content: center; cursor: pointer; width: 30px; height: 25px; gap: 5px; }
+.menu-toggle div { width: 100%; height: 3px; background-color: #333; border-radius: 2px; transition: all 0.3s ease; }
+
+/* HERO */
+.hero {
+  background: url('terrazaa.jpg') center center / cover no-repeat;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 40px 20px;
+  color: #b47c44;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.25);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 90%;
+  background: rgba(0,0,0,0.35);
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+}
+
+@keyframes aparecer { 
+  from { opacity: 0; transform: translateY(30px); } 
+  to { opacity: 1; transform: translateY(0); } 
+}
+.hero-content { animation: aparecer 1.5s ease-in-out; }
+
+.hero h1 { font-size: 2.5em; color: #b47c44; }
+.hero p { font-size: 1.3em; margin-top: 8px; }
+
+.btn {
+  background-color: #b47c44;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 15px;
+  display: inline-block;
+  transition: transform 0.3s, background-color 0.3s;
+  font-size: 1em;
+}
+.btn:hover { transform: scale(1.05); background-color: #a03c18; }
+
+/* PRESENTACION */
+.presentacion {
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 1.2s ease;
+  background-color: #f9f6f2;
+}
+.presentacion h2 { color: #b47c44; font-size: 2em; margin-bottom: 10px; }
+.presentacion p { max-width: 700px; margin: 0 auto; line-height: 1.6; font-size: 1.1em; }
+
+.presentacion-img img {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* TEXTO ARRIBA DEL CARRUSEL */
+.texto-carrusel {
+  text-align: center;
+  margin: 40px 0 10px 0;
+  font-size: 1.5em;
+  color: #b47c44;
+  font-weight: 600;
+}
+
+/* CARRUSEL (IMÁGENES ENTERAS) */
+.carrusel {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.7s ease-in-out;
+}
+
+.slides img {
+  min-width: 100%;
+  height: 500px;
+  object-fit: contain;
+  background-color: #f9f6f2;
+  border-radius: 20px;
+}
+
+.puntos {
+  text-align: center;
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.punto {
+  height: 11px;
+  width: 11px;
+  background-color: #d0b89f;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.punto.activo {
+  background-color: #b47c44;
+}
+
+/* FOOTER */
+footer { text-align: center; background-color: #fff; padding: 20px; font-size: 0.9em; color: #777; }
+
+/* RESPONSIVE */
+@media (max-width: 1023px) {
+  .menu-toggle { display: flex; }
+  nav { display: none; width: 100%; }
+  nav.active { display: flex; justify-content: center; background-color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); animation: fadeIn 0.3s ease; }
+  nav ul { flex-direction: column; align-items: center; gap: 12px; padding: 20px 0; }
+
+  .hero { min-height: 50vh; align-items: flex-end; }
+  .hero-content { padding: 15px; }
+  .hero h1 { font-size: 1.6em; }
+  .hero p { font-size: 1em; }
+
+  .slides img { height: 300px; }
+
+  .texto-carrusel { font-size: 1.2em; margin: 30px 0 10px 0; }
+}
+
+@media (min-width: 1024px) {
+  .hero { background: url('terraza.jpeg') center center / cover no-repeat; min-height: 100vh; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="logo_montgust.png" alt="Logo MontGust">
+    <div class="logo">MontGust</div>
+  </div>
+
+  <div class="menu-toggle" id="menu-toggle">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="menu.html">Menú y carta</a></li>
+      <li><a href="horario.html">Horario</a></li>
+      <li><a href="diferencias.html">Nuestra esencia</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="novedades.html">Novedades</a></li>
+      <li><a href="colabora.html">Colabora</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Bienvenido a MontGust</h1>
+    <p>Tu punto de encuentro en Mont-roig del Camp ☕🍻🥘</p>
+    <a href="menu.html" class="btn">Ver nuestra carta</a>
+  </div>
+</section>
+
+<section class="presentacion">
+  <h2>Lo que ofrecemos</h2>
+  <p>
+    Desde un café calentito por la mañana hasta bocadillos deliciosos y cervezas de barril como Estrella Damm y Turia.  
+    Disfruta de un ambiente familiar y acogedor, perfecto para desayunar, comer, cenar o simplemente relajarte con buena compañía.  
+    ¡Te esperamos para que vivas un momento único!
+  </p>
+  
+  <div class="presentacion-img">
+    <img src="interior.jpg" alt="Interior del restaurante">
+  </div>
+</section>
+
+<section class="texto-carrusel">
+  <h3>Descubre nuestros platos más deliciosos</h3>
+</section>
+
+<section class="carrusel">
+  <div class="slides" id="slides">
+    <img src="plato1.jpg">
+    <img src="plato2.jpg">
+    <img src="plato3.jpg">
+    <img src="plato4.jpg">
+    <img src="plato5.jpg">
+    <img src="plato6.jpg">
+    <img src="plato7.jpg">
+    <img src="plato8.jpg">
+    <img src="plato9.jpg">
+    <img src="plato10.jpg">
+    <img src="plato11.jpg">
+    <img src="plato12.jpg">
+    <img src="plato13.jpg">
+    <img src="plato14.jpg">
+    <img src="plato15.jpg">
+    <img src="plato16.jpg">
+    <img src="plato17.jpg">
+    <img src="plato18.jpg">
+    <img src="plato19.jpg">
+    <img src="plato20.jpg">
+    <img src="plato21.jpg">
+    <img src="plato22.jpg">
+    <img src="plato23.jpg">
+    <img src="plato24.jpg">
+    <img src="plato25.jpg">
+    <img src="plato26.jpg">
+    <img src="plato27.jpg">
+    <img src="plato28.jpg">
+  </div>
+  <div class="puntos" id="puntos"></div>
+</section>
+
+<footer>
+  <p>© 2025 MontGust | Mont-roig del Camp</p>
+</footer>
+
+<script>
+const toggle = document.getElementById('menu-toggle');
+const nav = document.getElementById('nav');
+toggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+  toggle.classList.toggle('open');
+});
+
+const slides = document.getElementById('slides');
+const total = slides.children.length;
+const puntos = document.getElementById('puntos');
+
+for (let i = 0; i < total; i++) {
+  const punto = document.createElement('span');
+  punto.classList.add('punto');
+  if (i === 0) punto.classList.add('activo');
+  puntos.appendChild(punto);
+}
+
+const indicadores = document.querySelectorAll('.punto');
+let index = 0;
+
+setInterval(() => {
+  index = (index + 1) % total;
+  slides.style.transform = `translateX(-${index * 100}%)`;
+  indicadores.forEach(p => p.classList.remove('activo'));
+  indicadores[index].classList.add('activo');
+}, 3500);
+</script>
+
+</body>
+</html>

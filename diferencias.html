@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esencia MontGust</title>
+  <link rel="icon" type="image/png" href="logo_montgust.png">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f6f2;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      flex-wrap: wrap;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-container img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #b47c44;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #b47c44;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+      width: 30px;
+      height: 25px;
+      gap: 5px;
+    }
+
+    .menu-toggle div {
+      width: 100%;
+      height: 3px;
+      background-color: #333;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      color: #b47c44;
+      margin: 40px 0 20px;
+    }
+
+    .diferencias {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      padding: 0 20px 40px;
+    }
+
+    .diferencias ul {
+      list-style: none;
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .diferencias li {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      font-weight: 500;
+      transition: transform 0.2s;
+      text-align: left;
+    }
+
+    .diferencias li strong {
+      font-size: 1.1em;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .diferencias li:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Carrusel */
+    .carrusel {
+      position: relative;
+      max-width: 800px;
+      margin: 50px auto;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      background: #fff;
+      padding: 15px;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.7s ease-in-out;
+    }
+
+    .slides img {
+      min-width: 100%;
+      height: 450px;
+      object-fit: contain;
+      border-radius: 15px;
+      background-color: #fdfaf7;
+      padding: 10px;
+    }
+
+    .puntos {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .punto {
+      height: 10px;
+      width: 10px;
+      background-color: #d0b89f;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 0 4px;
+      transition: background-color 0.3s;
+    }
+
+    .punto.activo {
+      background-color: #b47c44;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9rem;
+      color: #666;
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+    }
+
+    /* Móvil */
+    @media (max-width: 1023px) {
+      .menu-toggle { display: flex; }
+      nav { display: none; width: 100%; }
+      nav.active {
+        display: flex;
+        justify-content: center;
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        animation: fadeIn 0.3s ease;
+      }
+      nav ul { 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 12px; 
+        padding: 20px 0; 
+      }
+      header { flex-wrap: nowrap; }
+
+      .diferencias ul {
+        grid-template-columns: 1fr;
+      }
+      .diferencias li {
+        padding: 15px;
+      }
+
+      .slides img {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="logo_montgust.png" alt="Logo MontGust">
+      <div class="logo">MontGust</div>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="menu.html">Menú y carta</a></li>
+        <li><a href="horario.html">Horario</a></li>
+        <li><a href="diferencias.html" class="active">Nuestra esencia</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="novedades.html">Novedades</a></li>
+        <li><a href="colabora.html">Colabora</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Esencia MontGust</h1>
+
+    <section class="diferencias">
+      <p>En MontGust cuidamos cada detalle para ofrecerte una experiencia única y acogedora. 🌿</p>
+
+      <ul>
+        <li>
+          <strong>🍲 Paellas para llevar:</strong>
+          Disfruta de nuestras paellas caseras en tu casa, listas para cualquier ocasión.
+        </li>
+        <li>
+          <strong>🏡 Comida casera:</strong>
+          Platos tradicionales con el sabor de siempre, preparados con cariño.
+        </li>
+        <li>
+          <strong>🎉 Celebración de cumpleaños:</strong>
+          Hacemos que tu día especial sea inolvidable con menús adaptados.
+        </li>
+        <li>
+          <strong>💼 Comidas y cenas de empresa:</strong>
+          Espacios cómodos y menús pensados para reuniones de trabajo.
+        </li>
+        <li>
+          <strong>❄️ Aire acondicionado:</strong>
+          Ven y disfruta de tu comida en un ambiente fresco y agradable.
+        </li>
+        <li>
+          <strong>🌱 Adaptados a todos:</strong>
+          Si eres alérgico, intolerante o vegano, tenemos opciones para ti.
+        </li>
+      </ul>
+    </section>
+
+    <!-- FRASE AÑADIDA -->
+    <h2 style="text-align:center; color:#b47c44; margin-top:20px; font-size:1.4rem;">
+      Lo que dicen nuestros clientes 💛
+    </h2>
+    <p style="text-align:center; margin-bottom:20px; color:#555;">
+      Gracias a vosotr@s seguimos creciendo cada día.
+    </p>
+
+    <!-- CARRUSEL -->
+    <section class="carrusel">
+      <div class="slides" id="slides">
+        <img src="reseña19.jpg" alt="Reseña 1">
+        <img src="reseña1.jpg" alt="Reseña 1">
+        <img src="reseña2.jpg" alt="Reseña 2">
+        <img src="reseña3.jpg" alt="Reseña 3">
+        <img src="reseña4.jpg" alt="Reseña 4">
+        <img src="reseña5.jpg" alt="Reseña 5">
+        <img src="reseña6.jpg" alt="Reseña 6">
+        <img src="reseña7.jpg" alt="Reseña 7">
+        <img src="reseña8.jpg" alt="Reseña 8">
+        <img src="reseña9.jpg" alt="Reseña 9">
+        <img src="reseña10.jpg" alt="Reseña 10">
+        <img src="reseña11.jpg" alt="Reseña 11">
+        <img src="reseña12.jpg" alt="Reseña 12">
+        <img src="reseña13.jpg" alt="Reseña 13">
+        <img src="reseña14.jpg" alt="Reseña 14">
+        <img src="reseña15.jpg" alt="Reseña 15">
+        <img src="reseña16.jpg" alt="Reseña 16">
+        <img src="reseña17.jpg" alt="Reseña 17">
+        <img src="reseña18.jpg" alt="Reseña 18">
+      </div>
+      <div class="puntos" id="puntos"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Gracias por formar parte de nuestra esencia 💛</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      toggle.classList.toggle('open');
+    });
+
+    // Carrusel
+    const slides = document.getElementById('slides');
+    const total = slides.children.length;
+    const puntos = document.getElementById('puntos');
+
+    for (let i = 0; i < total; i++) {
+      const punto = document.createElement('span');
+      punto.classList.add('punto');
+      if (i === 0) punto.classList.add('activo');
+      puntos.appendChild(punto);
+    }
+
+    const indicadores = document.querySelectorAll('.punto');
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % total;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+      indicadores.forEach(p => p.classList.remove('activo'));
+      indicadores[index].classList.add('activo');
+    }, 3500);
+  </script>
+
+</body>
+</html>
